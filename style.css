@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fde8d7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* для статуса */
+
+#status>*:not(.status-visible){
+    display:none;
+}
+
+h1 {
+    color: #3a3939;
+    text-align: center;
+    margin-top: 27px;
+}
+
+#fieldSize {
+    min-width:100px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #bab1b1;
+    margin-bottom: 0px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#field {
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-flow:column;
+    /* grid-template-rows:repeat()
+    grid-template-columns: repeat(auto-fill, 40px); */
+    /* gap: 10px; */
+    /* padding: 10px; */
+    /* border: 2px solid #fde8d7; */
+}
+
+#field>div{
+    /* border:solid 1px red; */
+    box-shadow:0 0 0 1px red;
+    width:20px;
+    line-height:20px;
+    height:20px;
+    background:#EEEEEE;
+}
+
+/* .field button { */
+    /* width: 100%; */
+    /* height: 40px; */
+    /* font-size: 14px; */
+    /* background-color: #f9aeb4; */
+    /* border: 1px solid #ccc; */
+    /* cursor: pointer; */
+    /* background-image: none; */
+/* } */
+
+#field>.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#field>.cell-open {
+    background: #ffffff;
+    font-weight:700;
+    text-align: center;
+}
+
+#field>.cell-empty{
+    color:rgba(0,0,0,0);
+}
+/* 
+.field .flag {
+    background-image: url('image/flag_icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+#field>.cell-mine {
+    background: url('image/bomb.png') #ff6666;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #e9c3dd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e2399c;
+}

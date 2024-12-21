@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Minesweeper</h1>
+    </header>
+    <!-- Тег под приветсвтие -->
+    <section id="begin">
+        <label>
+            Выберите размер игрового поля (от 10 до 28)
+            <input type="number" min="10" max="28" id="fieldSize">
+        </label>
+        <button id="startButton" onclick="startGame()">Начать!</button>
+    </section>
+        <!-- Тег статуса -->
+    <section id="status">
+        <div class="status-game status-visible">Осталось <span class="status-game-minecount"></span> мин</div>
+        <div class="status-lose">Вы проиграли</div>
+        <div class="status-win">Вы выиграли</div>
+    </section>
+    <!-- Тег поля -->
+    <section onclick="fieldClick(event)" id="field"></section>
+    <script src="script.js"></script>
+</body>
+
+</html>
